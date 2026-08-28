@@ -1,6 +1,4 @@
-**Under Construction**
 
-<!--
 
 ## Assumptions
 
@@ -15,5 +13,3 @@
 - All MemoryStore requests have limitations on frequency and size.
 - All requests yield until a response or error has been received.
 
-
--->
