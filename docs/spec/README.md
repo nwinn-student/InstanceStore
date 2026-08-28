@@ -1,6 +1,8 @@
+## Runtime Assumptions
 
+- `require` functions as designed in Luau RFC <!-- Insert Number Here -->
 
-## Assumptions
+## Environmental Assumptions
 
 - `N`-Servers can be active at any given time.
 - A server has no guaranteed lifetime.
@@ -13,3 +15,4 @@
 - All MemoryStore requests have limitations on frequency and size.
 - All requests yield until a response or error has been received.
 
+## External Library Assumptions
