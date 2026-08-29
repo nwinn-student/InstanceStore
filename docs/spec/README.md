@@ -16,7 +16,7 @@
  users can abuse the blocking functionality to create
  individualized servers. 
 - Upon a server close, all operations are halted except for the
- closing remarks.
+ closing remarks (functions explicitly stated to run upon close).
 - All DataStore requests have limitations on frequency and size.
 - All MemoryStore requests have limitations on frequency and size.
 - All requests yield until a response or error has been received.
