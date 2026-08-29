@@ -1,6 +1,10 @@
 ## Runtime Assumptions
 
 - `require` functions as designed in Luau RFC <!-- Insert Number Here -->
+- The standard Luau libraries are provided in their entirety.
+- The standard Luau globals are provided in their entirety.
+- No modification has been made to the operators for `string`,
+ `boolean`, or `number`.
 
 ## Environmental Assumptions
 
@@ -16,3 +20,12 @@
 - All requests yield until a response or error has been received.
 
 ## External Library Assumptions
+
+
+## Cost Requirements
+
+- Automatic Migration cannot exceed 10% of the DataStore Get/Set request
+ limitations.
+- Automatic Migration cannot exceed 1% of the DataStore storage limitation.
+- Automatic Migration cannot exceed 20% of the MemoryStore request limitations.
+- Automatic Migration cannot exceed 25% of the MemoryStore storage limitation.
