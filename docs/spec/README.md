@@ -23,6 +23,8 @@
 
 ## External Library Assumptions
 
+- There exists a DataStore library that **TODO**.
+- There exists a MemoryStore library that **TODO**.
 
 ## Cost Requirements
 
@@ -31,3 +33,8 @@
 - Automatic Migration cannot exceed 1% of the DataStore storage limitation.
 - Automatic Migration cannot exceed 20% of the MemoryStore request limitations.
 - Automatic Migration cannot exceed 25% of the MemoryStore storage limitation.
+
+## History Path
+
+- Focus: Reducing migration effort
+  - 
