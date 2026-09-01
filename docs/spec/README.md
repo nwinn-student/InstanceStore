@@ -36,5 +36,27 @@
 
 ## History Path
 
-- Focus: Reducing migration effort
-  - 
+### Reducing Migration Effort
+
+- Approach 1: Instead of storing the name of
+   an item, store a unique identifier that
+   is never taken by another and never changes.
+  - Intent: No need to migrate when an item's
+     name changes.
+  - Flaw: Migrating across multiple versions leads
+     to inconsistencies.  <!-- Provide Example -->
+  - Result: Declined
+- Approach 2: Allow for default values to be specified
+   and remove them from the saved data.
+  - Intent: Reduce the size of the saved data while
+     allowing for optional fields.
+  - Flaw: Upon a default value changing and an entry
+     holding prior default data, their data holds a different
+     meaning.  Such changes may be abused.
+    - Example: `User1` has data `{ fruit = nil }` on version `v1`,
+     which signified that their `fruit` was a `"pear"`.
+     The next version `v2` modifies the default value of `fruit`
+     to be `"apple"`.  Because `User1` did not have `"pear"` saved,
+     their data's meaning changes.
+    - Takeaway: Do **not** modify a default value. 
+  - Result: Declined
