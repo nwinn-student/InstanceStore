@@ -38,9 +38,15 @@
 
 ### Reducing Migration Effort
 
+The base approach is having a set of migration
+ functions that the user must create to go from
+ `vN` to `vM`.  Where all versions between have
+ some migration function.
+
 - Approach 1: Instead of storing the name of
    an item, store a unique identifier that
    is never taken by another and never changes.
+   Inability to provide custom migration paths.
   - Intent: No need to migrate when an item's
      name changes.
   - Flaw: Migrating across multiple versions leads
@@ -60,3 +66,21 @@
      their data's meaning changes.
     - Takeaway: Do **not** modify a default value. 
   - Result: Declined
+- Approach 3: Allow for custom migrations on Approach 1.
+  - Intent: Support complex migrations while allowing simple
+     ones to not require effort.
+  - Flaw: There becomes a need to know when to add migration
+     functions.  Regardless the flaw from Approach 1 still
+     persists, but in a different form.
+  - Result: Declined
+- Approach 4: Allow for custom migrations, but have an identifier
+   system where all data has a `tag` and should the specific `tag`
+   get moved, it **TODO**.
+- Approach 5: Do nothing.
+  - Intent: Minimize migration concerns by forcing the developer
+     to create them.
+  - Flaw: Inconvient to the developer, pushing them to
+     try to create another declined Approach or variant
+     thereof that has migration issues.
+- Approach 5: Do nothing and provide an external program
+   to take the data format from `vN` and generate **TODO**
