@@ -75,7 +75,14 @@ The base approach is having a set of migration
   - Result: Declined
 - Approach 4: Allow for custom migrations, but have an identifier
    system where all data has a `tag` and should the specific `tag`
-   get moved, it **TODO**.
+   get moved, on load the tag will be moved to the corresponding
+   location.
+  - Different from Approach 3 in that `tag`s are global
+     and not local based on different scopes.
+  - Intent: **TODO**
+  - Flaw: Migrating across multiple versions causes
+     inconsistencies.
+
 - Approach 5: Do nothing.
   - Intent: Minimize migration concerns by forcing the developer
      to create them.
@@ -83,4 +90,12 @@ The base approach is having a set of migration
      try to create another declined Approach or variant
      thereof that has migration issues.
 - Approach 5: Do nothing and provide an external program
-   to take the data format from `vN` and generate **TODO**
+   to take the data format from `vN` and generate the
+   migration function for it to go to the next version.
+  - Requirements: An external storage of the previous
+     version's format.  The ability to modify code
+     in-place with a program capable of reading the code.
+     A provided location where the current version's format lies.
+  - Intent: Automatically generate migration functions to
+     improve user experience drastically.
+  - Flaw: There is no way to generate moves.
