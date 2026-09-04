@@ -81,7 +81,8 @@ The base approach is having a set of migration
      and not local based on different scopes.
   - Intent: **TODO**
   - Flaw: Migrating across multiple versions causes
-     inconsistencies.
+     inconsistencies.  Whether these tags are processed
+     prior to the migrations or post.
 
 - Approach 5: Do nothing.
   - Intent: Minimize migration concerns by forcing the developer
