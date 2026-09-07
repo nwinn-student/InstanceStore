@@ -64,7 +64,8 @@ The base approach is having a set of migration
      The next version `v2` modifies the default value of `fruit`
      to be `"apple"`.  Because `User1` did not have `"pear"` saved,
      their data's meaning changes.
-    - Takeaway: Do **not** modify a default value. 
+    - Takeaway: Do **not** modify a default value if the value
+       is not **always** stored.
   - Result: Declined
 - Approach 3: Allow for custom migrations on Approach 1.
   - Intent: Support complex migrations while allowing simple
