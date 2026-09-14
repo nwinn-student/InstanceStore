@@ -21,6 +21,8 @@
 - A server can receive requests from a client and can
    send requests to client(s).
 - A server can communicate with other servers, with limitations.
+ Note: The communication is done through either same data access
+  or a subscribe/post relationship.
 - There is no assumption that all clients attached to a
    server share the same underlying code.
 - There is no assumption that all servers share the
