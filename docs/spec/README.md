@@ -15,6 +15,7 @@
  Note: Not all experiences permit this behaviour, but
  users can abuse the blocking functionality to create
  individualized servers. 
+- A client can only be within one server at any given time.
 - Upon a server close, all operations are halted except for the
  closing remarks (functions explicitly stated to run upon close).
 - All DataStore requests have limitations on frequency and size.
