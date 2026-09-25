@@ -112,4 +112,14 @@ The base approach is having a set of migration
      A provided location where the current version's format lies.
   - Intent: Automatically generate migration functions to
      improve user experience drastically.
-  - Flaw: There is no way to generate moves.
+  - Flaw: There is no way to generate moves.  The relationship
+     for underling `Instance`s must be accounted for.
+- Approach 6: Do nothing and provide an Approach 5, but
+   with a tag-based system where developers must tag **all**
+   move-able aspects with a unique identifier.
+  - Requirements: Same as Approach 5
+  - Intent: Same as Approach 5 whilst accounting for the
+     inability to generate moves.
+  - Flaws: Excessive structural-load, as `Instance`s and
+     `Attributes` would need to be tagged.  The relationship
+     for underling `Instance`s must be accounted for.
