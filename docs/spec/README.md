@@ -46,6 +46,11 @@
 - Automatic Migration cannot exceed 20% of the MemoryStore request limitations.
 - Automatic Migration cannot exceed 25% of the MemoryStore storage limitation.
 
+## User Assumptions
+
+- The user expects that when a server is incapable of understanding an entry,
+   that the user is informed.
+
 ## History Path
 
 ### Reducing Migration Effort
